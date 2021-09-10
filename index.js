@@ -7,18 +7,18 @@ app.init = async () => {
     const connection = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        database: 'mushroom',
+        database: 'social',
     });
 
     let sql = '';
     let rows = [];
 
-
+    // // perskaitom ka turim is pradziu
     sql = 'SELECT * FROM `friends`';
     [rows] = await connection.execute(sql);
-
-
     console.log(rows);
+
+
 
 }
 
